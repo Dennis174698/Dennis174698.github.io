@@ -461,7 +461,68 @@ public static int[] selectSort(int[] nums)&#123;
         nums[preIndex+1] = cur;
 &#125;</code></pre>
 <h3 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h3><p>直接插入排序平均时间复杂度为O(n2)，最好时间复杂度为O(n)，最坏时间复杂度为O(n2)。<br>最好情况：如果待排序元素本来是正序的，比较和移动元素的次数分别是 (n - 1) 和 0，因此最好情况的时间复杂度为O(n)。<br>最坏情况：如果待排序元素本来是逆序的，需要进行 (n - 1) 趟排序，所需比较和移动次数分别为 n * (n - 1) / 2和 n * (n - 1) / 2。因此最坏情况下的时间复杂度为O(n2)。</p>
-<h2 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h2>
+<h2 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h2><h3 id="算法描述-3"><a href="#算法描述-3" class="headerlink" title="算法描述"></a>算法描述</h3><p>归并排序是建立在归并操作上的一种有效的排序算法。该算法是采用分治法（Divide and Conquer）的一个非常典型的应用。将已有序的子序列合并，得到完全有序的序列；即先使每个子序列有序，再使子序列段间有序。若将两个有序表合并成一个有序表，称为2-路归并。</p>
+<p>1）把长度为 n 的输入序列分成两个长度为 n / 2 的子序列；<br>2）对这两个子序列分别采用归并排序；<br>3）将两个排序好的子序列合并成一个最终的排序序列。</p>
+<p>时间复杂度稳定为O(nlogn),空间复杂度O(n)，递归引用空间</p>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">mergeSort</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> len<span class="token punctuation">(</span>nums<span class="token punctuation">)</span><span class="token operator">&lt;=</span><span class="token number">1</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> nums
+    mid <span class="token operator">=</span> len<span class="token punctuation">(</span>nums<span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">2</span>
+
+    left <span class="token operator">=</span> mergeSort<span class="token punctuation">(</span>nums<span class="token punctuation">[</span><span class="token punctuation">:</span>mid<span class="token punctuation">]</span><span class="token punctuation">)</span>
+    right <span class="token operator">=</span> mergeSort<span class="token punctuation">(</span>nums<span class="token punctuation">[</span>mid<span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">return</span> merge<span class="token punctuation">(</span>left<span class="token punctuation">,</span>right<span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">merge</span><span class="token punctuation">(</span>left<span class="token punctuation">,</span>right<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">"""合并两个已拍好的列表，产生一个新的已排序好的列表"""</span>
+    result<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">]</span>
+    i <span class="token operator">=</span> <span class="token number">0</span>
+    j <span class="token operator">=</span> <span class="token number">0</span>
+
+    <span class="token comment" spellcheck="true">#队列表中的两个元素两两对比</span>
+    <span class="token comment" spellcheck="true">#将最小的元素，放到result中，并对当前下标+1</span>
+    <span class="token keyword">while</span> i<span class="token operator">&lt;</span>len<span class="token punctuation">(</span>left<span class="token punctuation">)</span> <span class="token operator">and</span> j<span class="token operator">&lt;</span>len<span class="token punctuation">(</span>right<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> left<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">&lt;=</span>right<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">:</span>
+        result<span class="token punctuation">.</span>append<span class="token punctuation">(</span>left<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>
+        i<span class="token operator">+=</span><span class="token number">1</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+        result<span class="token punctuation">.</span>append<span class="token punctuation">(</span>right<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>
+        j<span class="token operator">+=</span><span class="token number">1</span>
+    result <span class="token operator">+=</span> left<span class="token punctuation">[</span>i<span class="token punctuation">:</span><span class="token punctuation">]</span>
+    result <span class="token operator">+=</span> right<span class="token punctuation">[</span>j<span class="token punctuation">:</span><span class="token punctuation">]</span>
+    <span class="token keyword">return</span> result</code></pre>
+<pre><code>public static int[] mergeSort(int[] nums)&#123;
+    if(nums.length&lt;=1)&#123;
+    return nums;
+    &#125;
+    int mid = nums.length/2;
+    int[] left = Arrays.copyOfRange(nums,0,mid);
+    int[] right = Arrays.copyOfRange(nums,mid,nums.length);
+
+    return mergeSort(mergeSort(left),mergeSort(right));
+&#125;
+public static int[] merge(int[] left, int[] right)&#123;
+    int[] result = new int[left.length + right.length];
+    int i=0,j=0,k=0;
+    while (i &lt; left.length &amp;&amp; j &lt; right.length) &#123;
+            if (left[i] &lt;= right[j]) &#123;
+                result[k++] = left[i++];
+            &#125; else &#123;
+                result[k++] = right[j++];
+            &#125;
+        &#125;
+        while (i &lt; left.length) &#123;
+            result[k++] = left[i++];
+        &#125;
+        while (j &lt; right.length) &#123;
+            result[k++] = right[j++];
+        &#125;
+        return result;
+&#125;
+
+</code></pre>
+
             </div>
             <hr/>
 
