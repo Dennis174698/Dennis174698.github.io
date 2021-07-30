@@ -1,0 +1,1143 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="排序算法, Dennis_Chen">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>排序算法 | Dennis_Chen</title>
+    <link rel="icon" type="image/jpeg" href="/dennis.jpeg">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Dennis_Chen" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/dennis.jpeg" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Dennis_Chen</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>Index</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>Tags</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>Categories</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>Archives</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>About</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="Search" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/dennis.jpeg" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Dennis_Chen</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			Index
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			Tags
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			Categories
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			Archives
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			About
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">排序算法</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E7%AE%97%E6%B3%95/">
+                                <span class="chip bg-color">算法</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
+                                算法
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
+                    2021-05-28
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p><img src="/image/java/sort.png"></p>
+<ul>
+<li>相关资料：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/47170b1ced23">https://www.jianshu.com/p/47170b1ced23</a></li>
+</ul>
+<h2 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h2><h3 id="算法描述"><a href="#算法描述" class="headerlink" title="算法描述"></a>算法描述</h3><ul>
+<li>比较相邻的元素，如果前一个比后一个大，交换两个元素</li>
+<li>从最开始的一对到最后一对，这样最后的元素就是数组里最大的数</li>
+<li>重复以上步骤，除了最后一个</li>
+<li>重复步骤1-3，知道排序完成。</li>
+</ul>
+<pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true">#python实现</span>
+<span class="token keyword">def</span> <span class="token function">bubbleSort</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    n <span class="token operator">=</span> len<span class="token punctuation">(</span>nums<span class="token punctuation">)</span>
+    <span class="token keyword">if</span> n <span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> nums
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">for</span> j <span class="token keyword">in</span> range<span class="token punctuation">(</span>n<span class="token number">-1</span><span class="token operator">-</span>i<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> nums<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">></span>nums<span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+        nums<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">,</span>nums<span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> nums<span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>nums<span class="token punctuation">[</span>j<span class="token punctuation">]</span>
+        
+    <span class="token keyword">return</span> nums
+        
+</code></pre>
+<pre><code>//Java实现
+public static int[] bubbleSort(int[] nums)&#123;
+    n = nums.lengthl
+    if(n==0)&#123;return nums;&#125;
+    for(int i=0;i&lt;n;i++)&#123;
+    for(int j=0;j&lt;n-1-i;j++)&#123;
+        if(nums[j]&gt;nums[j+1])&#123;
+        int tmp = nums[j+1];
+        nums[j+1] = nums[j];
+        nums[j] = tmp;
+        &#125;
+    &#125;
+    &#125;
+&#125;
+</code></pre>
+<h2 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h2><h3 id="算法描述-1"><a href="#算法描述-1" class="headerlink" title="算法描述"></a>算法描述</h3><p>从未排序的序列中找到最大（小）元素，放入排序序列的起始位置。再从剩余未排序元素中继续寻找最小（大）元素，放到已排序序列的末尾。</p>
+<pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true">#python 实现</span>
+
+<span class="token keyword">def</span> <span class="token function">selectSort</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    n <span class="token operator">=</span> len<span class="token punctuation">(</span>nums<span class="token punctuation">)</span>
+    <span class="token keyword">if</span> n<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">:</span> <span class="token keyword">return</span> nums
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    minIndex <span class="token operator">=</span> i
+    <span class="token keyword">for</span> j <span class="token keyword">in</span> range<span class="token punctuation">(</span>i<span class="token punctuation">,</span>n<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> nums<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">&lt;</span>nums<span class="token punctuation">[</span>minIndex<span class="token punctuation">]</span><span class="token punctuation">:</span>
+        minIndex <span class="token operator">=</span> j
+    tmp <span class="token operator">=</span> nums<span class="token punctuation">[</span>minIndex<span class="token punctuation">]</span>      <span class="token comment" spellcheck="true">#最小元素和无序区第一个数交换</span>
+    nums<span class="token punctuation">[</span>minIndex<span class="token punctuation">]</span> <span class="token operator">=</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+    nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> tmp
+    <span class="token keyword">return</span> nums
+</code></pre>
+<pre><code>//java实现
+public static int[] selectSort(int[] nums)&#123;
+    n = nums.length;
+    if(n==0)&#123;return nums;&#125;
+    for(int i=0;i&lt;n;i++)&#123;
+    int minIndex=i;
+    for(int j=i;j&lt;n;j++)&#123;
+        if(nums[minIndex]&lt;nums[j])&#123;minIndex = j;&#125;
+            &#125;
+        int tmp=nums[minIndex];
+        nums[minIndex] = nums[i];
+        nums[i] = tmp;
+    &#125;
+    return nums;
+&#125;
+</code></pre>
+<h2 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h2><h3 id="算法描述-2"><a href="#算法描述-2" class="headerlink" title="算法描述"></a>算法描述</h3><p>直接插入排序（Insertion-Sort）的算法描述是一种简单直观的排序算法。它的工作原理是通过构建有序序列，对于未排序数据，在已排序序列中从后向前扫描，找到相应位置并插入。</p>
+<p>一般来说，直接插入排序都采用in-place（原地算法）在数组上实现。具体算法描述如下：<br>1）从第一个元素开始，该元素可以认为已经被排序；<br>2）取出下一个元素，在已经排序的元素序列中从后向前扫描；<br>3）如果该元素（已排序）大于新元素，将该元素移到下一位置；<br>4）重复步骤3，直到找到已排序的元素小于或者等于新元素的位置；<br>5）将新元素插入到该位置后；<br>6）重复步骤2~5。</p>
+<pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true">#python实现</span>
+<span class="token keyword">def</span> <span class="token function">insertionSort</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    n <span class="token operator">=</span> len<span class="token punctuation">(</span>nums<span class="token punctuation">)</span>
+    <span class="token keyword">if</span> n<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">:</span> <span class="token keyword">return</span> nums
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span>n<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        cur <span class="token operator">=</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span>       <span class="token comment" spellcheck="true">#取出未排序部分的第一个元素</span>
+        preIndex <span class="token operator">=</span> i<span class="token number">-1</span>      <span class="token comment" spellcheck="true">#排序部分最后一位元素</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span>preIndex<span class="token operator">>=</span><span class="token number">0</span> <span class="token operator">and</span> cur<span class="token operator">&lt;</span>nums<span class="token punctuation">[</span>preIndex<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token comment" spellcheck="true">#跟前一位元素对比</span>
+            nums<span class="token punctuation">[</span>preIndex<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> nums<span class="token punctuation">[</span>preIndex<span class="token punctuation">]</span>      
+        preIndex<span class="token operator">-=</span><span class="token number">1</span>                            <span class="token comment" spellcheck="true">#从后往前比较</span>
+        nums<span class="token punctuation">[</span>preIndex<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> cur                     <span class="token comment" spellcheck="true">#插入元素</span>
+
+    <span class="token keyword">return</span> nums
+    
+</code></pre>
+<pre><code>public static int[] insertionSort(int[] nums )&#123;
+    int n = nums.length;
+    if(n==0)&#123;return nums;&#125;
+    int cur;
+    for(int i=1;i&lt;n;i++)&#123;
+        cur = nums[i];
+        preIndex = i-1;
+        while(preIndex&gt;=0 &amp;&amp; cur&lt;nums[preIndex])&#123;
+            nums[preIndex+1]=nums[preIndex];
+            preIndex--;
+        &#125;
+        &#125;
+        nums[preIndex+1] = cur;
+&#125;
+</code></pre>
+<h3 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h3><p>直接插入排序平均时间复杂度为O(n2)，最好时间复杂度为O(n)，最坏时间复杂度为O(n2)。<br>最好情况：如果待排序元素本来是正序的，比较和移动元素的次数分别是 (n - 1) 和 0，因此最好情况的时间复杂度为O(n)。<br>最坏情况：如果待排序元素本来是逆序的，需要进行 (n - 1) 趟排序，所需比较和移动次数分别为 n * (n - 1) / 2和 n * (n - 1) / 2。因此最坏情况下的时间复杂度为O(n2)。</p>
+<h2 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h2><h3 id="算法描述-3"><a href="#算法描述-3" class="headerlink" title="算法描述"></a>算法描述</h3><p>归并排序是建立在归并操作上的一种有效的排序算法。该算法是采用分治法（Divide and Conquer）的一个非常典型的应用。将已有序的子序列合并，得到完全有序的序列；即先使每个子序列有序，再使子序列段间有序。若将两个有序表合并成一个有序表，称为2-路归并。</p>
+<p>1）把长度为 n 的输入序列分成两个长度为 n / 2 的子序列；<br>2）对这两个子序列分别采用归并排序；<br>3）将两个排序好的子序列合并成一个最终的排序序列。</p>
+<p>时间复杂度稳定为O(nlogn),空间复杂度O(n)，递归引用空间</p>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">mergeSort</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> len<span class="token punctuation">(</span>nums<span class="token punctuation">)</span><span class="token operator">&lt;=</span><span class="token number">1</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> nums
+    mid <span class="token operator">=</span> len<span class="token punctuation">(</span>nums<span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">2</span>
+    
+    left <span class="token operator">=</span> mergeSort<span class="token punctuation">(</span>nums<span class="token punctuation">[</span><span class="token punctuation">:</span>mid<span class="token punctuation">]</span><span class="token punctuation">)</span>
+    right <span class="token operator">=</span> mergeSort<span class="token punctuation">(</span>nums<span class="token punctuation">[</span>mid<span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">return</span> merge<span class="token punctuation">(</span>left<span class="token punctuation">,</span>right<span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">merge</span><span class="token punctuation">(</span>left<span class="token punctuation">,</span>right<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">"""合并两个已拍好的列表，产生一个新的已排序好的列表"""</span>
+    result<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">]</span>
+    i <span class="token operator">=</span> <span class="token number">0</span>
+    j <span class="token operator">=</span> <span class="token number">0</span>
+    
+    <span class="token comment" spellcheck="true">#队列表中的两个元素两两对比</span>
+    <span class="token comment" spellcheck="true">#将最小的元素，放到result中，并对当前下标+1</span>
+    <span class="token keyword">while</span> i<span class="token operator">&lt;</span>len<span class="token punctuation">(</span>left<span class="token punctuation">)</span> <span class="token operator">and</span> j<span class="token operator">&lt;</span>len<span class="token punctuation">(</span>right<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> left<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">&lt;=</span>right<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">:</span>
+        result<span class="token punctuation">.</span>append<span class="token punctuation">(</span>left<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>
+        i<span class="token operator">+=</span><span class="token number">1</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+        result<span class="token punctuation">.</span>append<span class="token punctuation">(</span>right<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>
+        j<span class="token operator">+=</span><span class="token number">1</span>
+    result <span class="token operator">+=</span> left<span class="token punctuation">[</span>i<span class="token punctuation">:</span><span class="token punctuation">]</span>
+    result <span class="token operator">+=</span> right<span class="token punctuation">[</span>j<span class="token punctuation">:</span><span class="token punctuation">]</span>
+    <span class="token keyword">return</span> result
+</code></pre>
+<pre><code>public static int[] mergeSort(int[] nums)&#123;
+    if(nums.length&lt;=1)&#123;
+    return nums;
+    &#125;
+    int mid = nums.length/2;
+    int[] left = Arrays.copyOfRange(nums,0,mid);
+    int[] right = Arrays.copyOfRange(nums,mid,nums.length);
+    
+    return merge(mergeSort(left),mergeSort(right));
+&#125;
+public static int[] merge(int[] left, int[] right)&#123;
+    int[] result = new int[left.length + right.length];
+    int i=0,j=0,k=0;
+    while (i &lt; left.length &amp;&amp; j &lt; right.length) &#123;
+            if (left[i] &lt;= right[j]) &#123;
+                result[k++] = left[i++];
+            &#125; else &#123;
+                result[k++] = right[j++];
+            &#125;
+        &#125;
+        while (i &lt; left.length) &#123;
+            result[k++] = left[i++];
+        &#125;
+        while (j &lt; right.length) &#123;
+            result[k++] = right[j++];
+        &#125;
+        return result;
+&#125;
+
+</code></pre>
+<h2 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h2><h3 id="算法描述-4"><a href="#算法描述-4" class="headerlink" title="算法描述"></a>算法描述</h3><p>快速排序使用分治法来把一个数列分为两个子数列。具体算法描述如下：<br>1）从数列中挑出一个元素，称为 “基准”（pivot）；<br>2）重新排序数列，所有比基准值小的元素放在基准前面，所有比基准值大的元素放在基准的后面（相同的数可以到任一边），该基准就处于数列的中间位置。这称为分区（partition）操作；<br>3）递归地（recursive）对小于基准值元素的子数列和大于基准值元素的子数列进行快速排序。</p>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">quicksort</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> len<span class="token punctuation">(</span>nums<span class="token punctuation">)</span><span class="token operator">&lt;</span><span class="token number">2</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> nums
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+    cur <span class="token operator">=</span> nums<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+    less <span class="token operator">=</span> <span class="token punctuation">[</span>i <span class="token keyword">for</span> i <span class="token keyword">in</span> nums<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token punctuation">]</span> <span class="token keyword">if</span> i<span class="token operator">&lt;</span>cur<span class="token punctuation">]</span>
+    greater <span class="token operator">=</span> <span class="token punctuation">[</span>i <span class="token keyword">for</span> i <span class="token keyword">in</span> nums<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token punctuation">]</span> <span class="token keyword">if</span> i<span class="token operator">>=</span>cur<span class="token punctuation">]</span>
+    <span class="token keyword">return</span> <span class="token punctuation">[</span>quicksort<span class="token punctuation">(</span>less<span class="token punctuation">)</span><span class="token operator">+</span><span class="token punctuation">[</span>cur<span class="token punctuation">]</span><span class="token operator">+</span>quicksort<span class="token punctuation">(</span>greater<span class="token punctuation">)</span><span class="token punctuation">]</span>
+</code></pre>
+<h2 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h2><h3 id="算法描述-5"><a href="#算法描述-5" class="headerlink" title="算法描述"></a>算法描述</h3><p>堆排序是一种树形选择排序方法，它利用了堆这种数据结构。在排序的过程中，将array[0，…，n-1]看成是一颗完全二叉树的顺序存储结构，利用完全二叉树中双亲结点和孩子结点之间的关系，在当前无序区中选择关键字最大（最小）的元素。</p>
+<p>② 概念<br>堆：堆是一种完全二叉树，且满足所有父节点的值均大于等于（或小于等于）其子节点的值。<br>大根堆（最大堆）：满足所有父节点的值均大于等于其子节点的值的堆称为大根堆，堆顶元素是堆中元素的最大值。<br>小根堆（最小堆）：满足所有父节点的值均小于等于其子节点的值的堆称为小根堆，堆顶元素是堆中元素的最小值。<br>堆的顺序存储结构：使用顺序数据结构（数组）存储堆，表示方法为：<br>1.数组按层序遍历的顺序存放完全二叉树的结点，下标为 0 处为堆顶，下标为 len - 1 处为堆尾。<br>2.结点 i 如果存在左孩子（下标不超过 len - 1 就存在），左孩子的下标为（2 * i + 1）；如果存在右孩子，右孩子的下标为（2 * i + 2）。结点 i 的父结点下标为 (i - 1) / 2 (下标为 0 的结点除外，它没有父结点)。最后一个非叶子结点即为堆尾元素的父结点，下标为 (len - 1 - 1) / 2 = (len - 2) / 2。</p>
+<p>③ 算法描述<br>1）将初始待排序关键字序列(R1,R2….Rn)构建成大顶堆，此堆为初始的无序区；<br>2）将堆顶元素R[1]与最后一个元素R[n]交换，此时得到新的无序区(R1,R2,……Rn-1)和新的有序区(Rn),且满足R[1,2…n-1]&lt;=R[n]；<br>3）由于交换后新的堆顶R[1]可能违反堆的性质，因此需要对当前无序区(R1,R2,……Rn-1)调整为新堆，然后再次将R[1]与无序区最后一个元素交换，得到新的无序区(R1,R2….Rn-2)和新的有序区(Rn-1,Rn)。不断重复此过程直到有序区的元素个数为（n-1），则整个排序过程完成。</p>
+<pre><code>//声明全局变量，用于记录数组array的长度；
+static int len;
+/**
+ * 堆排序算法
+ * @param array
+ * @return
+ */
+public static int[] HeapSort(int[] array) &#123;
+        len = array.length;
+        if (len == 0) return array;
+        //1.构建一个大根堆
+        buildMaxHeap(array);
+        //2.循环将堆顶（最大值）与堆尾交换，删除堆尾元素，然后重新调整大根堆
+        while (len &gt; 0) &#123;
+            swap(array, 0, len - 1);
+            len--; //原先的堆尾进入有序区，删除堆尾元素
+            adjustHeap(array, 0); //重新调整大根堆
+        &#125;
+        return array;
+ &#125;
+
+ /**
+   * 自顶向下调整以 i 为根的堆为大根堆
+   * @param array
+   * @param i
+   */
+public static void adjustHeap(int[] array, int i) &#123;
+        int maxIndex = i;
+        //如果有左子树，且左子树大于父节点，则将最大指针指向左子树
+        if (2 * i + 1 &lt; len &amp;&amp; array[2 * i + 1] &gt; array[maxIndex])
+            maxIndex = 2 * i + 1;
+        //如果有右子树，且右子树大于父节点，则将最大指针指向右子树
+        if (2 * i + 2 &lt; len &amp;&amp; array[2 * i + 2] &gt; array[maxIndex])
+            maxIndex = 2 * i + 2;
+        //如果父节点不是最大值，则将父节点与最大值交换，并且递归调整与父节点交换的位置。
+        if (maxIndex != i) &#123;
+            swap(array, maxIndex, i);
+            adjustHeap(array, maxIndex);
+        &#125;
+ &#125;
+
+ /**
+  * 自底向上构建初始大根堆
+  * @param array
+  */
+ public static void buildMaxHeap(int[] array) &#123;
+        //从最后一个非叶子节点开始自底向上构造大根堆
+        for (int i = (len - 2) / 2; i &gt;= 0; i--) &#123; 
+            adjustHeap(array, i);
+        &#125;
+ &#125;
+</code></pre>
+<h2 id="二分查找（补充）"><a href="#二分查找（补充）" class="headerlink" title="二分查找（补充）"></a>二分查找（补充）</h2><pre><code>public statin int binarySearch(int[] arr, int target)&#123;
+    int low = 0;
+    int high = arr.length -1;
+    int mid = 0;
+    if(target&lt;arr[low] || target&gt;arr[high]||low&gt;high)&#123;return -1;&#125;
+    
+    while(low&lt;=high)&#123;
+        mid = low+(high-low)/2; //避免int溢出
+        if(arr[mid]&gt;target)&#123;     
+        high = mid-1;       //大于 -1
+    &#125;
+    if(arr[mid]&lt;target)&#123;     //小于+1
+        low = mid+1;
+    &#125;
+    else&#123;return mid;&#125;
+
+    &#125;
+    return -1;
+&#125;
+</code></pre>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/bandaoyu/article/details/106596449?utm_medium=distribute.pc_relevant.none-task-blog-baidujs_title-1&spm=1001.2101.3001.4242">算法详解二分查找算法（思路很简单，细节是魔鬼）</a></li>
+</ul>
+
+            </div>
+            <hr/>
+
+            
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E7%AE%97%E6%B3%95/">
+                                    <span class="chip bg-color">算法</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: '953c9b26068cfe6c17d2',
+        clientSecret: '6dcac0518ac64fb967fb0ffbcb3a8ea6297912cc',
+        repo: 'dennis174698.github.io',
+        owner: 'Dennis174698',
+        admin: "Dennis174698",
+        id: '2021-05-28T21-17-51',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+            <div class="card">
+                <a href="/2021/05/29/%E9%9B%86%E5%90%88%E7%B1%BB/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="集合类">
+                        
+                        <span class="card-title">集合类</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Java 常用集合
+1. List1.1 List基本实现
+ArrayList: List 主要实现类，底层使用Object[]存储，适合频繁查询工作，线程不安全
+Vector: 古老实现类，线程安全，
+LinkedList: 底层使用双向
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-05-29
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Java/" class="post-category">
+                                    Java
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Java/">
+                        <span class="chip bg-color">Java</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/05/24/Java-IO/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="Java I/O">
+                        
+                        <span class="card-title">Java I/O</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Java I/o基础概念Java 的I/O大概可以分成一下几类：
+
+磁盘操作：File
+字节操作：InputStream 和 OutputStream
+字符操作：Reader 和 Writer
+对象操作：Serializable
+网络操作：
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-24
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Java/" class="post-category">
+                                    Java
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Java/">
+                        <span class="chip bg-color">Java</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;TOC</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+    });
+</script>
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="3124311861"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='list'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2019</span>
+            <a href="/about" target="_blank">Dennis Chen</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/Dennis174698" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:reven435932970@163.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;Search</span>
+            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/search.xml", 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>

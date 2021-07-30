@@ -1,0 +1,1280 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Java基础, Dennis_Chen">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>Java基础 | Dennis_Chen</title>
+    <link rel="icon" type="image/jpeg" href="/dennis.jpeg">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Dennis_Chen" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/dennis.jpeg" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Dennis_Chen</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>Index</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>Tags</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>Categories</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>Archives</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>About</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="Search" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/dennis.jpeg" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Dennis_Chen</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			Index
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			Tags
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			Categories
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			Archives
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			About
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">Java基础</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/java/">
+                                <span class="chip bg-color">java</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/java/" class="post-category">
+                                java
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
+                    2021-05-23
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="Java基础"><a href="#Java基础" class="headerlink" title="Java基础"></a>Java基础</h1><h2 id="1-基本数据类型"><a href="#1-基本数据类型" class="headerlink" title="1.基本数据类型"></a>1.基本数据类型</h2><h3 id="1-1-8种基本类型"><a href="#1-1-8种基本类型" class="headerlink" title="1.1 8种基本类型"></a>1.1 8种基本类型</h3><p><img src="/image/java/8.png"></p>
+<h3 id="1-2-包装类型"><a href="#1-2-包装类型" class="headerlink" title="1.2 包装类型"></a>1.2 包装类型</h3><p>将简单类型包装为类,含有以下用途</p>
+<ol>
+<li>提供类的对象操作,如类型转换,进制转换等</li>
+<li>集合不允许存放基本数据类型,使用包装类</li>
+<li>包装类含有基本类型的相关属性,如最大值,最小值等</li>
+</ol>
+<p>包装类都为final不可继承</p>
+<h3 id="1-3-装箱与拆箱"><a href="#1-3-装箱与拆箱" class="headerlink" title="1.3 装箱与拆箱"></a>1.3 装箱与拆箱</h3><p>Integer x = 2;     // 装箱 调用了 Integer.valueOf(2)<br>int y = x;         // 拆箱 调用了 X.intValue()</p>
+<p>new Integer(123) 和 Integer.valueOf(123) 区别<br>new Interger 新建了一个对象<br>.valueOf()会调用缓存池的对象,多次调用会取得同一对象的引用.</p>
+<p>包装类型内存使用 private static class IntegerCache，声明一个内部使用的缓存池</p>
+<p>如Integer中有个静态内部类IntegerCache，里面有个cache[],也就是Integer常量池，常量池的大小为一个字节（-128~127）<br>为啥把缓存设置为[-128，127]区间？性能和资源之间的权衡。 在 jdk 1.8 所有的数值类缓冲池中，Integer 的缓冲池 IntegerCache 很特殊，这个缓冲池的下界是 - 128，上界默认是 127，但是这个上界是可调的，在启动 jvm 的时候，通过 -XX:AutoBoxCacheMax= 来指定这个缓冲池的大小。<br>基本类型对应的缓冲池如下：</p>
+<p>boolean values: true and false<br>all byte values<br>short values: between -128 and 127<br>int values: between -128 and 127<br>char: in the range \u0000 to \u007F</p>
+<h3 id="1-4-String"><a href="#1-4-String" class="headerlink" title="1.4 String"></a>1.4 String</h3><p>String 被声明为final,不可继承,线程安全</p>
+<ol>
+<li><p>intern() 方法:<br>当一个字符串调用 intern() 方法时，如果 String Pool 中已经存在一个字符串和该字符串值相等（使用 equals() 方法进行确定），那么就会返回 String Pool 中字符串的引用；<br>否则，就会在 String Pool 中添加一个新的字符串，并返回这个新字符串的引用。</p>
+</li>
+<li><p>运行效率<br>StringBuilder &gt; StringBuffer &gt; String<br>但是String str = “hello”+ “world”的效率就比 StringBuilder st = new StringBuilder().append(“hello”).append(“world”)要高</p>
+</li>
+<li><p>使用总结</p>
+</li>
+</ol>
+<p><strong>少量数据:</strong> String<br><strong>单线程操作,字符缓冲区大量数据:</strong> Stringbuilder<br><strong>多线程操作,字符缓冲区大量数据:</strong> StringBuffer<br>4. 线程安全<br>String：对象定义后不可变，线程安全。<br>StringBuffer：是线程安全的（对调用方法加入同步锁），执行效率较慢，适用于多线程下操作字符串缓冲区大量数据。<br>StringBuilder：是线程不安全的，适用于单线程下操作字符串缓冲区大量数据。<br>5. 共同点<br>StringBuilder和StringBuffer有共同的父类AbstractStringBuilder（抽象类）。</p>
+<p>　　StringBuilder和StringBuffer的方法都会调用AbstractStringBuilder中的公共方法，如super.append（…）,只是StringBuffer会在方法上加上synchronized关键字进行同步。</p>
+<pre><code>String a = &quot;hello2&quot;; 　  
+String b = &quot;hello&quot;;       
+String c = b + 2;       
+System.out.println((a == c));
+输出结果为:false。由于有符号引用的存在，所以  String c = b + 2;不会在编译期间被优化，不会把b+2当做字面常量来处理的
+
+String a = &quot;hello2&quot;;   　
+final String b = &quot;hello&quot;;       
+String c = b + 2;       
+System.out.println((a == c));
+输出结果为：true。对于被final修饰的变量，会在class文件常量池中保存一个副本，也就是说不会通过连接而进行访问
+</code></pre>
+<h2 id="2-关键字"><a href="#2-关键字" class="headerlink" title="2.关键字"></a>2.关键字</h2><h3 id="2-1-final"><a href="#2-1-final" class="headerlink" title="2.1 final"></a>2.1 final</h3><ul>
+<li><strong>数据</strong>:: 声明数据为常量,可以是编译时常量,也可以是在运行时被初始化后不能改变的常量</li>
+<li><strong>基本类型:</strong>, 数据不变</li>
+<li><strong>引用类型:</strong>, 是引用不变,但被引用的对象可以被改变</li>
+<li>被修饰的数据在jvm常量池中</li>
+<li>被修饰的类不能被继承,方法不能被重写</li>
+</ul>
+<h3 id="2-2-static"><a href="#2-2-static" class="headerlink" title="2.2 static"></a>2.2 static</h3><ul>
+<li><strong>修饰类的话只能修饰内部类:</strong>, 非静态内部类编译完成之后会隐含一个引用,指向创建他的外围类,但是静态内部类没有. <strong>所以,静态内部类的创建不需要依赖外围类,不能使用任何外围类的非static成员变量和方法</strong></li>
+<li><strong>修饰成员变量和成员方法:</strong>: 被类中所有的对象共享,存放在JVM方法区(1.8为Metaspace),类加载后可直接调用,aclass.staticMethod(),aclass.staticValue</li>
+<li><strong>静态代码块:</strong> 静态代码块定义在类中方法外, 静态代码块在非静态代码块之前执行(静态代码块—&gt;非静态代码块—&gt;构造方法)。 该类不管创建多少对象，静态代码块只执行一次.</li>
+</ul>
+<p>单例模式:</p>
+<pre><code>class Singleton&#123;
+    private volatile static Singleton uniqueInstance;
+    private Sigleton()&#123;&#125;;
+    public static Singleton getSingleton()&#123;
+        if(uniqueInstance==null)&#123;
+        synchronized(Singleton.class)&#123;
+        if(uniqueInstance==null)&#123;
+            uniqueInstance = new Singleton();
+            &#125;
+                &#125;
+            &#125;
+    return uniqueInstance;
+        &#125;
+&#125;
+</code></pre>
+<h3 id="2-3-super关键字"><a href="#2-3-super关键字" class="headerlink" title="2.3 super关键字"></a>2.3 super关键字</h3><p>用于子类从父类访问变量和方法</p>
+<pre><code>class Animal&#123;
+    String color = &quot;white&quot;;
+&#125;
+class Dog extends Animal&#123;
+    String color = &quot;black&quot;;
+    void printColor()&#123;
+    System.out.println(color); //打印狗的color
+    System.out.println(super.color);//打印Animal 的color
+    &#125;
+&#125;
+</code></pre>
+<h2 id="3-面向对象"><a href="#3-面向对象" class="headerlink" title="3.面向对象"></a>3.面向对象</h2><h3 id="3-1-三大特性"><a href="#3-1-三大特性" class="headerlink" title="3.1 三大特性"></a>3.1 三大特性</h3><ul>
+<li><strong>封装:</strong> 指把对象的属性封装在对象内部,不允许外部对象直接访问对象的内部信息</li>
+</ul>
+<ol>
+<li>把对象属性私有化,对每个属性提供getter,setter方法</li>
+<li>如果有带参的构造函数,需要再写一个不带参的构造函数</li>
+<li>建议重写toString方法</li>
+<li>内部细节对外部调用透明,外部调用无需修改或者关心内部实现</li>
+</ol>
+<ul>
+<li><strong>继承:</strong> 是使用已存在的类的定义作为基础建立新类的技术,新类的定义可以增加新的属性或新的方法,可以使用父类的功能,不能选择性继承.<br>通过继承,可以提高代码的复用率,提高开发效率.</li>
+</ul>
+<ol>
+<li>子类拥有父类的属性和方法,但是私有方法和属性无法访问,只能拥有.</li>
+<li>子类可以拥有自己的方法,在父类的基础上拓展.</li>
+<li>可以用自己的方法实现父类的方法?</li>
+</ol>
+<ul>
+<li><strong>多态:</strong> 指一个对象拥有多种状态. 具体表现为父类的引用指向子类的实例.</li>
+</ul>
+<p><strong>多态的特点:</strong></p>
+<ul>
+<li>对象类型和引用类型之间具有继承（类）/实现（接口）的关系；</li>
+<li>引用类型变量发出的方法调用的到底是哪个类中的方法，必须在程序运行期间才能确定；</li>
+<li>多态不能调用“只在子类存在但在父类不存在”的方法；</li>
+<li>如果子类重写了父类的方法，真正执行的是子类覆盖的方法，如果子类没有覆盖父类的方法，执行的是父类的方法。</li>
+</ul>
+<pre><code>abstract class Animal&#123;
+    abstract void eat();
+&#125;
+class Cat extends Animal&#123;
+    public void eat()&#123; System.out.println(&quot;eat fish&quot;);&#125;
+&#125;
+class Dog extends Animal&#123;
+    public void eat()&#123;System.out.println(&quot;eat bones&quot;);&#125;
+&#125;
+
+class DuoTaiDemo&#123;
+    public static void main(String[] args)&#123;
+    function(new Cat());
+    function(new Dog());
+    
+    Animal a = new Cat();
+    a.eat();
+    Cat c = (Cat)a;
+    c.eat();
+&#125;
+    public static void function(Animal a)&#123;
+    a.eat();
+    if(a instanceof Cat)&#123;Cat c = (Cat)a;c.catchMouse();&#125;
+    else if(a instanceof Dog)&#123;Dog c = (Dog)a;c.kanJia();&#125;
+    &#125;
+&#125;
+</code></pre>
+<h3 id="3-2-重载和重写"><a href="#3-2-重载和重写" class="headerlink" title="3.2 重载和重写"></a>3.2 重载和重写</h3><p><strong>重载:</strong> 发生在同一个类中,方法名必须相同,参数类型不同,个数不同,顺序不同,方法返回值和访问修饰符可以不同.比如多个构造器.<br><strong>重写:</strong> 发生在运行期,子类对父类允许访问的方法进行重新编写.</p>
+<ol>
+<li>返回值类型、方法名、参数列表必须相同，抛出的异常范围小于等于父类，访问修饰符范围大于等于父类。</li>
+<li>如果父类方法访问修饰符为 private/final/static 则子类就不能重写该方法，但是被 static 修饰的方法能够被再次声明。</li>
+<li>构造方法无法被重写</li>
+</ol>
+<pre><code>public class Hero &#123;
+    public String name() &#123;
+        return &quot;超级英雄&quot;;
+    &#125;
+&#125;
+public class SuperMan extends Hero&#123;
+    @Override
+    public String name() &#123;
+        return &quot;超人&quot;;
+    &#125;
+    public Hero hero() &#123;
+        return new Hero();
+    &#125;
+&#125;
+
+public class SuperSuperMan extends SuperMan &#123;
+    public String name() &#123;
+        return &quot;超级超级英雄&quot;;
+    &#125;
+
+    @Override
+    public SuperMan hero() &#123;
+        return new SuperMan();
+    &#125;
+&#125;
+</code></pre>
+<h3 id="3-3-泛型"><a href="#3-3-泛型" class="headerlink" title="3.3 泛型"></a>3.3 泛型</h3><p>泛型提供了编译时类型安全检测机制. 本质是参数化类型,也就是说操作的数据类型被指定为一个参数.<br>类型擦除: 在编译期间,所有的泛型信息都会被擦掉.</p>
+<ul>
+<li>泛型方法</li>
+</ul>
+<pre><code>public static &lt;E&gt; void printArray(E() inputArray)&#123;
+    for(E element: inputArray)&#123;
+    System.out.println(&quot;%s&quot;,element);
+    &#125;
+&#125; //传入不同类型数组: Interger,Double 和 Charcter
+ // 打印不同数组
+</code></pre>
+<ul>
+<li>泛型类</li>
+</ul>
+<pre><code>public class Generic&lt;T&gt;&#123;
+    private T key;
+    public Generic(T key)&#123;
+    this.key = key;
+    &#125;
+    public T getKey()&#123;return key;&#125;
+&#125;
+
+Generic&lt;Integer&gt; genericInteger = new Generic&lt;Integer&gt;(123456);
+</code></pre>
+<ul>
+<li>泛型接口</li>
+</ul>
+<pre><code>public interface Generic&lt;T&gt;&#123; public T method();&#125;
+
+//实现泛型接口，不指定类型：
+
+class GeneratorImpl&lt;T&gt; implements Generator&lt;T&gt;&#123;
+    @Override
+    public T method() &#123;
+        return null;
+    &#125;
+&#125;
+Copy to clipboardErrorCopied
+//实现泛型接口，指定类型：
+
+class GeneratorImpl&lt;T&gt; implements Generator&lt;String&gt;&#123;
+    @Override
+    public String method() &#123;
+        return &quot;hello&quot;;
+    &#125;
+&#125;
+</code></pre>
+<p>常用的通配符为： T，E，K，V，？</p>
+<ul>
+<li>？ 表示不确定的 java 类型</li>
+<li>T (type) 表示具体的一个 java 类型</li>
+<li>K V (key value) 分别代表 java 键值中的 Key Value</li>
+<li>E (element) 代表 Element</li>
+</ul>
+<h3 id="3-4-接口和抽象类"><a href="#3-4-接口和抽象类" class="headerlink" title="3.4 接口和抽象类"></a>3.4 接口和抽象类</h3><ul>
+<li>接口<ul>
+<li>接口是抽象类的延伸</li>
+<li>从Java8开始,可以拥有默认的方法实现</li>
+<li>接口的字段+方法默认都是public的,且不允许定义为private或protected</li>
+<li>接口的字段默认都是static 和 final的</li>
+</ul>
+</li>
+</ul>
+<pre><code>public class Main &#123;
+    public static void main(String[] args) &#123;
+        Person p = new Student(&quot;Xiao Ming&quot;);
+        p.run();
+    &#125;
+&#125;
+
+interface Person &#123;
+    String getName();
+    default void run() &#123;
+        System.out.println(getName() + &quot; run&quot;);
+    &#125;
+&#125;
+
+class Student implements Person &#123;
+    private String name;
+
+    public Student(String name) &#123;
+        this.name = name;
+    &#125;
+
+    public String getName() &#123;
+        return this.name;
+    &#125;
+&#125;
+//Xiao ming run
+</code></pre>
+<ul>
+<li>抽象类<ul>
+<li>如果一个类中包含抽象方法，那么这个类必须声明为抽象类。</li>
+<li>抽象类和抽象方法都使用 abstract 关键字进行声明</li>
+</ul>
+</li>
+</ul>
+<p>抽象类和普通类最大的区别是，抽象类不能被实例化，只能被继承。</p>
+<p><strong>比较</strong></p>
+<ul>
+<li>抽象类的目的是实现代码复用,一种模板设计的方法,可以让这些类都派生于一个抽象类。</li>
+<li>接口的设计目的是对类的行为进行约束,提供一种机制,使不同的类可以继承相同的功能。</li>
+<li>接口的字段只能是static 和final,抽象类的字段没有这些要求。</li>
+<li>接口的成员只能是public,抽象类可以有不同的访问权限。</li>
+</ul>
+<h3 id="3-5-反射"><a href="#3-5-反射" class="headerlink" title="3.5 反射"></a>3.5 反射</h3><ul>
+<li>JVM为每个加载的class及interface创建了对应的Class实例来保存class及interface的所有信息。</li>
+<li>通过Class实例获取 class信息的方法成为反射。</li>
+</ul>
+<p>反射可以提供运行时的类信息，并且这个类可以在运行时才加载进来，甚至在编译时期该类的 .class 不存在也可以加载进来。</p>
+<ul>
+<li>当编译一个新类时，会产生一个同名的 .class 文件，该文件内容保存着 Class 对象。</li>
+<li>类加载相当于 Class 对象的加载，类在第一次使用时才动态加载到 JVM 中。</li>
+<li>也可以使用 Class.forName(“com.mysql.jdbc.Driver”) 这种方式来控制类的加载，该方法会返回一个 Class 对象。</li>
+</ul>
+<p>Class 和 java.lang.reflect 一起对反射提供了支持，java.lang.reflect 类库主要包含了以下三个类：</p>
+<ul>
+<li>Field ：可以使用 get() 和 set() 方法读取和修改 Field 对象关联的字段；</li>
+<li>Method ：可以使用 invoke() 方法调用与 Method 对象关联的方法；</li>
+<li>Constructor ：可以用 Constructor 的 newInstance() 创建新的对象。</li>
+</ul>
+<pre><code>通过反射创建对象
+Class clazz = Class.forName(&quot;reflection.Person&quot;);//获取 Person 类的 Class 对象
+Person p = (Person)class.newInstance();//使用.newInstane 方法创建对象
+Constructor c = class.getDeclaredConstructor(String.class,String.class,int.class);//获取构造方法并创建对象
+Person p1 = (Person)c.newInstance(&quot;李四&quot;,&quot;男&quot;,&quot;20&quot;);//创建对象并设置属性
+</code></pre>
+<h2 id="4-Java8新特性"><a href="#4-Java8新特性" class="headerlink" title="4.Java8新特性"></a>4.Java8新特性</h2><h3 id="4-1-streams（流）"><a href="#4-1-streams（流）" class="headerlink" title="4.1 streams（流）"></a>4.1 streams（流）</h3><ul>
+<li><strong>Fliter</strong></li>
+</ul>
+<p>过滤通过一个predicate接口来过滤并只保留符合条件的元素，该操作属于中间操作，所以我们可以在过滤后的结果来应用其他Stream操作（比如forEach）。forEach需要一个函数来对过滤后的元素依次执行。forEach是一个最终操作，所以我们不能在forEach之后来执行其他Stream操作。</p>
+<pre><code>stringList
+    .stream()
+    .filter((s)-&gt;s.startsWith(&quot;a&quot;))
+    .forEach(System.out::println);
+</code></pre>
+<ul>
+<li><strong>Sorted</strong></li>
+</ul>
+<pre><code>stringList
+    .stream()
+    .sorted()
+    .filter((s)-&gt;s.startsWith(&quot;a&quot;))
+    .forEach(System.out::println);
+</code></pre>
+<p>需要注意的是，排序只创建了一个排列好后的Stream，而不会影响原有的数据源，排序之后原数据stringCollection是不会被修改的：</p>
+<ul>
+<li><strong>Map</strong></li>
+</ul>
+<p>中间操作 map 会将元素根据指定的 Function 接口来依次将元素转成另外的对象。<br>下面的示例展示了将字符串转换为大写字符串。你也可以通过map来将对象转换成其他类型，map返回的Stream类型是根据你map传递进去的函数的返回值决定的。</p>
+<pre><code>stringList
+    .stream()
+    .map(String::toUpperCase)
+    .sorted((a,b)-&gt;b.compareTo(a))
+    .forEach(System.out::println);
+</code></pre>
+<ul>
+<li><strong>Match</strong></li>
+</ul>
+<p>Stream提供了多种匹配操作，允许检测指定的Predicate是否匹配整个Stream。所有的匹配操作都是 最终操作 ，并返回一个 boolean 类型的值。</p>
+<pre><code>// 测试 Match (匹配)操作
+        boolean anyStartsWithA =
+                stringList
+                        .stream()
+                        .anyMatch((s) -&gt; s.startsWith(&quot;a&quot;));
+        System.out.println(anyStartsWithA);      // true
+
+        boolean allStartsWithA =
+                stringList
+                        .stream()
+                        .allMatch((s) -&gt; s.startsWith(&quot;a&quot;));
+
+        System.out.println(allStartsWithA);      // false
+
+        boolean noneStartsWithZ =
+                stringList
+                        .stream()
+                        .noneMatch((s) -&gt; s.startsWith(&quot;z&quot;));
+
+        System.out.println(noneStartsWithZ);      // true
+</code></pre>
+<ul>
+<li><strong>Count</strong></li>
+</ul>
+<p>计数是一个 最终操作，返回Stream中元素的个数，返回值类型是 long。</p>
+<pre><code>//测试 Count (计数)操作
+long startsWithB =
+stringList
+          .stream()
+          .filter((s) -&gt; s.startsWith(&quot;b&quot;))
+          .count();
+System.out.println(startsWithB);    // 3
+</code></pre>
+<ul>
+<li>Reduce(规约)</li>
+</ul>
+<p>这是一个 最终操作 ，允许通过指定的函数来将stream中的多个元素规约为一个元素，规约后的结果是通过Optional 接口表示的：</p>
+<pre><code>//测试 Reduce (规约)操作
+        Optional&lt;String&gt; reduced =
+                stringList
+                        .stream()
+                        .sorted()
+                        .reduce((s1, s2) -&gt; s1 + &quot;#&quot; + s2);
+
+        reduced.ifPresent(System.out::println);//aaa1#aaa2#bbb1#bbb2#bbb3#ccc#ddd1#ddd2
+</code></pre>
+<p>译者注： 这个方法的主要作用是把 Stream 元素组合起来。它提供一个起始值（种子），然后依照运算规则（BinaryOperator），和前面 Stream 的第一个、第二个、第 n 个元素组合。从这个意义上说，字符串拼接、数值的 sum、min、max、average 都是特殊的 reduce。例如 Stream 的 sum 就相当于Integer sum = integers.reduce(0, (a, b) -&gt; a+b);也有没有起始值的情况，这时会把 Stream 的前面两个元素组合起来，返回的是 Optional。</p>
+<pre><code>// 字符串连接，concat = &quot;ABCD&quot;
+String concat = Stream.of(&quot;A&quot;, &quot;B&quot;, &quot;C&quot;, &quot;D&quot;).reduce(&quot;&quot;, String::concat); 
+// 求最小值，minValue = -3.0
+double minValue = Stream.of(-1.5, 1.0, -3.0, -2.0).reduce(Double.MAX_VALUE, Double::min); 
+// 求和，sumValue = 10, 有起始值
+int sumValue = Stream.of(1, 2, 3, 4).reduce(0, Integer::sum);
+// 求和，sumValue = 10, 无起始值
+sumValue = Stream.of(1, 2, 3, 4).reduce(Integer::sum).get();
+// 过滤，字符串连接，concat = &quot;ace&quot;
+concat = Stream.of(&quot;a&quot;, &quot;B&quot;, &quot;c&quot;, &quot;D&quot;, &quot;e&quot;, &quot;F&quot;).
+ filter(x -&gt; x.compareTo(&quot;Z&quot;) &gt; 0).
+ reduce(&quot;&quot;, String::concat);
+</code></pre>
+
+            </div>
+            <hr/>
+
+            
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/java/">
+                                    <span class="chip bg-color">java</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: '953c9b26068cfe6c17d2',
+        clientSecret: '6dcac0518ac64fb967fb0ffbcb3a8ea6297912cc',
+        repo: 'dennis174698.github.io',
+        owner: 'Dennis174698',
+        admin: "Dennis174698",
+        id: '2021-05-23T16-33-27',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+            <div class="card">
+                <a href="/2021/05/24/Java-IO/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="Java I/O">
+                        
+                        <span class="card-title">Java I/O</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Java I/o基础概念Java 的I/O大概可以分成一下几类：
+
+磁盘操作：File
+字节操作：InputStream 和 OutputStream
+字符操作：Reader 和 Writer
+对象操作：Serializable
+网络操作：
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-05-24
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Java/" class="post-category">
+                                    Java
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Java/">
+                        <span class="chip bg-color">Java</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/03/15/%E4%BA%8C%E5%8F%89%E6%A0%91%E4%B8%93%E9%A1%B9%E7%BB%83%E4%B9%A0%EF%BC%88%E4%B8%89%EF%BC%89%EF%BC%88depth-height%EF%BC%89/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="二叉树专项练习（三）（depth&amp;height）">
+                        
+                        <span class="card-title">二叉树专项练习（三）（depth&amp;height）</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+110. 平衡二叉树给定一个二叉树，判断它是否是高度平衡的二叉树。本题中，一棵高度平衡二叉树定义为：一个二叉树每个节点 的左右两个子树的高度差的绝对值不超过 1 。
+
+示例
+输入：root = [3,9,20,null,null,15,7
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-15
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/leetcode/" class="post-category">
+                                    leetcode
+                                </a>
+                            
+                            <a href="/categories/leetcode/%E4%BA%8C%E5%8F%89%E6%A0%91/" class="post-category">
+                                    二叉树
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/leetcode/">
+                        <span class="chip bg-color">leetcode</span>
+                    </a>
+                    
+                    <a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/">
+                        <span class="chip bg-color">二叉树</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;TOC</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+    });
+</script>
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="3124311861"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='list'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2019</span>
+            <a href="/about" target="_blank">Dennis Chen</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/Dennis174698" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:reven435932970@163.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;Search</span>
+            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/search.xml", 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
